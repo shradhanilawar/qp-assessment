@@ -1,24 +1,22 @@
 import express from 'express';
-import bodyParser from 'body-parser';
-import adminRoutes from './routes/admin-routes';
-import userRoutes from './routes/user-routes';
+import adminRoutes from './routes/admin.routes';
+import userRoutes from './routes/user.routes';
 import sequelize from './config/db.config';
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+app.use(express.json());
 
-app.use(bodyParser.json());
+const PORT = process.env.PORT;
 
-// Routes
-app.use('/admin', adminRoutes);
-app.use('/user', userRoutes);
+app.use('/api/admin', adminRoutes);
+app.use('/api/user', userRoutes);
 
-// Test DB Connection
-sequelize.sync().then(() => {
-  console.log('Database connected');
-});
+// Sync DB and start server
+sequelize.sync().then(() => console.log('Database connected'));
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
+
+export default app;

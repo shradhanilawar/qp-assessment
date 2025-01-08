@@ -1,7 +1,7 @@
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../config/db.config';
 
-export class Grocery extends Model {
+class Grocery extends Model {
   public id!: number;
   public name!: string;
   public price!: number;
@@ -12,8 +12,8 @@ Grocery.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      autoIncrement: true,
       primaryKey: true,
+      autoIncrement: true,
     },
     name: {
       type: DataTypes.STRING,
@@ -26,7 +26,6 @@ Grocery.init(
     quantity: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 0,
     },
   },
   {

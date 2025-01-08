@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import {
-  viewGroceryItems,
   bookGroceries,
-} from '../controllers/user-controller';
+  viewGroceryItems,
+} from '../controllers/user.controller';
 
 const router = Router();
 
