@@ -1,20 +1,20 @@
-1. Install Dependencies
+## 1. Install Dependencies
 
-   npm install
+npm install
 
-2. Run the Application
+## 2. Run the Application
 
-   npm run dev
+npm run dev
 
-3. Build and start the containers
+## 3. Build and start the containers
 
-   docker-compose up --build
+docker-compose up --build
 
-4. Testing the Endpoints
+## 4. Testing the Endpoints
 
--Add Grocery Item:
+#### Add Grocery Item:
 
-POST /admin/grocery
+POST /api/admin/grocery
 
 Example: {
 "name": "Apple",
@@ -22,13 +22,13 @@ Example: {
 "quantity": 50
 }
 
-View Grocery Items:
+#### View Grocery Items:
 
-GET /admin/groceries
+GET /api/admin/groceries
 
-Update Grocery Item:
+#### Update Grocery Item:
 
-PUT /admin/grocery/:id
+PUT /api/admin/grocery/:id
 
 Example:
 {
@@ -37,21 +37,21 @@ Example:
 "quantity": 60
 }
 
-Delete Grocery Item:
+#### Delete Grocery Item:
 
-DELETE /admin/grocery/:id
+DELETE /api/admin/grocery/:id
 
-View Grocery Items:
+#### View Grocery Items:
 
-GET /user/groceries
+GET /api/user/groceries
 
-Book Grocery Items:
+#### Book Grocery Items:
 
-POST /user/order
+POST /api/user/order
 
-{
-"items": [
-{ "id": 1, "quantity": 5 },
-{ "id": 2, "quantity": 3 }
+[
+    {
+        "id": 1,
+        "quantity": 30
+    }
 ]
-}

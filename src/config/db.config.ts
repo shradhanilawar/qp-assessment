@@ -1,8 +1,10 @@
+// Import the required packages library
 import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
 
 dotenv.config(); // Load environment variables
 
+// Initialize a new Sequelize
 const sequelize = new Sequelize(
   process.env.DB_NAME!,
   process.env.DB_USER!,
@@ -13,4 +15,5 @@ const sequelize = new Sequelize(
   }
 );
 
+// Export the Sequelize instance
 export default sequelize;

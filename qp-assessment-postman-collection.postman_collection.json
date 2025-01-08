@@ -1,0 +1,530 @@
+{
+	"info": {
+		"_postman_id": "2c682dae-437b-4f9c-8066-9933a5043f88",
+		"name": "qp-assessment-postman-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31734062"
+	},
+	"item": [
+		{
+			"name": "viewGroceryItems",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/admin/groceries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"admin",
+						"groceries"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "responce",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/admin/groceries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"admin",
+								"groceries"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "507"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1fb-y9fspfEhUeGr9AcY3LQOy4G+Ngo\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 08 Jan 2025 20:03:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Apple\",\n        \"price\": 3,\n        \"quantity\": 20,\n        \"createdAt\": \"2025-01-07T15:00:47.000Z\",\n        \"updatedAt\": \"2025-01-07T18:39:18.000Z\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Banana\",\n        \"price\": 12,\n        \"quantity\": 0,\n        \"createdAt\": \"2025-01-07T15:01:18.000Z\",\n        \"updatedAt\": \"2025-01-07T18:39:18.000Z\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Kiwi\",\n        \"price\": 2,\n        \"quantity\": 40,\n        \"createdAt\": \"2025-01-07T15:01:40.000Z\",\n        \"updatedAt\": \"2025-01-07T15:01:40.000Z\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Santra\",\n        \"price\": 42,\n        \"quantity\": 20,\n        \"createdAt\": \"2025-01-07T15:01:56.000Z\",\n        \"updatedAt\": \"2025-01-08T19:19:28.000Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "addGroceryItem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"watermelon\",\r\n  \"price\": 50.0,\r\n  \"quantity\": 20\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/admin/grocery",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"admin",
+						"grocery"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "responce",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"watermelon\",\r\n  \"price\": 50.0,\r\n  \"quantity\": 20\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/admin/grocery",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"admin",
+								"grocery"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "131"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"83-z2dM6oX76w62te7Zpq0ZQtR89VU\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 08 Jan 2025 20:06:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 7,\n    \"name\": \"watermelon\",\n    \"price\": 50,\n    \"quantity\": 20,\n    \"updatedAt\": \"2025-01-08T20:06:10.113Z\",\n    \"createdAt\": \"2025-01-08T20:06:10.113Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "removeGroceryItem",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/admin/grocery/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"admin",
+						"grocery",
+						"7"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "responce",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/admin/grocery/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"admin",
+								"grocery",
+								"7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"22-pyoVpOhg6wOBckbMXGPST5dIM4M\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 08 Jan 2025 20:07:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Grocery item deleted\"\n}"
+				}
+			]
+		},
+		{
+			"name": "updateGroceryItem",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"watermelon\",\r\n  \"price\": 42.0,\r\n  \"quantity\": 20\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/admin/grocery/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"admin",
+						"grocery",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "responce",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"watermelon\",\r\n  \"price\": 42.0,\r\n  \"quantity\": 20\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/admin/grocery/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"admin",
+								"grocery",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"22-LtPAbwZCj5GEAt7TN50a5Nxw/zk\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 08 Jan 2025 20:09:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Grocery item updated\"\n}"
+				}
+			]
+		},
+		{
+			"name": "user-viewGroceryItems",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/user/groceries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"user",
+						"groceries"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "responce",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/user/groceries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"user",
+								"groceries"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "511"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1ff-vBZk5bEabVKg9ZMqXslxrr8ycFc\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 08 Jan 2025 20:11:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Apple\",\n        \"price\": 3,\n        \"quantity\": 20,\n        \"createdAt\": \"2025-01-07T15:00:47.000Z\",\n        \"updatedAt\": \"2025-01-07T18:39:18.000Z\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Banana\",\n        \"price\": 12,\n        \"quantity\": 0,\n        \"createdAt\": \"2025-01-07T15:01:18.000Z\",\n        \"updatedAt\": \"2025-01-07T18:39:18.000Z\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Kiwi\",\n        \"price\": 2,\n        \"quantity\": 40,\n        \"createdAt\": \"2025-01-07T15:01:40.000Z\",\n        \"updatedAt\": \"2025-01-07T15:01:40.000Z\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"watermelon\",\n        \"price\": 42,\n        \"quantity\": 20,\n        \"createdAt\": \"2025-01-07T15:01:56.000Z\",\n        \"updatedAt\": \"2025-01-08T20:09:05.000Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "user-bookGroceries",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"quantity\": 30\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/user/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"user",
+						"order"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "responce",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"quantity\": 20\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/user/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"user",
+								"order"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"33-czuz6R8qRBLnkCQLdNzNlGqWUsk\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 08 Jan 2025 20:12:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"success\": false,\n        \"message\": \"Out of stock\"\n    }\n]"
+				}
+			]
+		}
+	]
+}

@@ -1,6 +1,8 @@
+// Import the required packages library
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../config/db.config';
 
+// Define the Grocery model
 class Grocery extends Model {
   public id!: number;
   public name!: string;
@@ -8,6 +10,7 @@ class Grocery extends Model {
   public quantity!: number;
 }
 
+// Initialize the Grocery model
 Grocery.init(
   {
     id: {

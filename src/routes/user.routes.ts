@@ -1,3 +1,4 @@
+// Import the required packages library
 import { Router } from 'express';
 import {
   bookGroceries,
@@ -6,6 +7,7 @@ import {
 
 const router = Router();
 
+//Define the routes
 router.get('/groceries', viewGroceryItems);
 router.post('/order', bookGroceries);
 
